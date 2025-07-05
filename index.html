@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukesh Chowdary K | Video Editor & Colorist</title>
+    
+    <!-- Google Fonts for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+        /* CSS STYLES */
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #00aaff;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* --- Updated Gradient Background --- */
+            background: linear-gradient(135deg, #1e1e1e, #121212); 
+            background-attachment: fixed; /* Keeps the gradient in place on scroll */
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--surface-color);
+            background: rgba(0,0,0,0.1); /* Slight dark overlay for header */
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--surface-color);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            width: 70px;
+            height: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+
+        p, ul {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        b, strong {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        
+        #portfolio-link {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            text-align: center;
+            display: block;
+            margin-top: 1.5rem;
+        }
+        
+        #portfolio-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category h3 {
+            color: white;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+        
+        ul li::before {
+            content: "▹";
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        #contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        #contact-info a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        #contact-info a:hover {
+            color: var(--primary-color);
+        }
+        
+        #contact-info i {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--surface-color); /* Added for separation */
+        }
+        
+        /* Remove last border for better design */
+        #contact {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            section, header {
+                padding: 3rem 1rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            #contact-info {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Mukesh Chowdary K</h1>
+            <p class="subtitle">Video Editor & Colorist</p>
+        </header>
+        
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I'm Mukesh Chowdary K, a passionate and detail-oriented video editor specializing in creating compelling visual stories. While currently pursuing my <strong>B.Tech in my third year at SRIT</strong>, I dedicate my focus to the art of post-production.
+                </p>
+                <p>
+                    My unique strength lies in combining professional-grade color grading with fast-paced, modern editing techniques. I am certified in <strong>DaVinci Resolve for Color Grading</strong> and proficient with industry-standard software like <strong>Adobe Premiere Pro</strong> and mobile powerhouses like <strong>CapCut Pro</strong>.
+                </p>
+                <p>
+                    My passion for visual arts extends beyond client work to my personal project, <strong>Celestial Serene</strong>. On this Instagram page, I explore nature videography and photography, constantly sharpening my eye for composition and capturing beautiful moments. This daily practice informs my professional work, bringing a fresh, creative perspective to every project.
+                </p>
+            </section>
+            
+            <section id="portfolio">
+                <h2>Work Examples</h2>
+                <p>This website serves as my portfolio. To see a collection of my finished projects—demonstrating my skills in color grading, social media edits, and more—please visit my public project folder linked below.</p>
+                <a id="portfolio-link" href="https://drive.google.com/drive/folders/1TumgD3ttd0ZpdlDe_7Oheh7BMDU45Ybt" target="_blank">
+                    <i class="fa-brands fa-google-drive"></i> View Project Gallery on Google Drive
+                </a>
+            </section>
+
+            <section id="services">
+                <h2>Services I Offer</h2>
+                <ul>
+                    <li>Professional Color Grading & Correction</li>
+                    <li>Social Media Video Editing (Reels, TikToks, Shorts)</li>
+                    <li>Promotional & Corporate Videos</li>
+                    <li>Vlog & Travel Video Editing</li>
+                    <li>Subtitling & Captions</li>
+                    <li>Basic Motion Graphics & Text Overlays</li>
+                </ul>
+            </section>
+
+            <section id="toolkit">
+                <h2>My Toolkit & Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Primary Software</h3>
+                        <ul>
+                            <li>DaVinci Resolve (Certified)</li>
+                            <li>Adobe Premiere Pro</li>
+                            <li>CapCut Pro</li>
+                            <li>VN Video Editor</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Professional Skills</h3>
+                        <ul>
+                            <li>Storytelling & Pacing</li>
+                            <li>Attention to Detail</li>
+                            <li>Time Management</li>
+                            <li>Clear Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Let's Create Together!</h2>
+                <p>
+                    I am excited to help with your next video project. I am readily available for a call or message to discuss your needs.
+                </p>
+                <div id="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:msai81398@gmail.com">Email Me</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/916281651895" target="_blank">Message on WhatsApp</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/celestial__serene/profilecard/?igsh=eWU4ajIyeWdjZTB5" target="_blank">@celestial_serene</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2024 Mukesh Chowdary K. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FOR FADE-IN ANIMATION -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
